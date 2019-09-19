@@ -26,7 +26,7 @@
         <TextView
             style="@style/TextViewStyle"
             android:id="@+id/txt_principal"
-            android:text=""
+            android:text="0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -47,31 +47,34 @@
             android:layout_height="match_parent">
 
             <Button
-                android:backgroundTint="#560108"
                 style="@style/btnStyle"
+                android:id="@+id/btn_ce"
+                android:backgroundTint="#560108"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
                 android:text="CE" />
 
             <Button
-                android:backgroundTint="#560108"
                 style="@style/btnStyle"
+                android:id="@+id/btn_c"
+                android:backgroundTint="#560108"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
                 android:text="C" />
 
             <Button
                 style="@style/btnStyle"
-                android:backgroundTint="#560108"
+                android:id="@+id/btn_pow"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="ds" />
+                android:text="^2" />
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_raiz"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="±" />
+                android:text="√" />
 
         </TableRow>
 

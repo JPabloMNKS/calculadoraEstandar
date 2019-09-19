@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnUno,btnDos,btnTres,btnCuatro,btnCinco,btnSeis,btnSiete,btnOcho,btnNueve,btnCero;
     TextView txtPrincipal,txtPrevio;
     Button btnMas,btnMenos,btnMultiplicar,btnDivision,btnPunto,btnIgual;
+    Button btnC,btnCE,btnPow,btnRaiz;
 
 
     // variables
@@ -48,6 +49,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPunto = findViewById(R.id.btn_punto);
         btnIgual = findViewById(R.id.btn_igual);
 
+        btnC = findViewById(R.id.btn_c);
+        btnCE = findViewById(R.id.btn_ce);
+        btnPow = findViewById(R.id.btn_pow);
+        btnRaiz = findViewById(R.id.btn_raiz);
+
         // enlazando textos con los ID's
         txtPrincipal = findViewById(R.id.txt_principal);
         txtPrevio = findViewById(R.id.txt_previo);
@@ -71,7 +77,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnDivision.setOnClickListener(this);
         btnPunto.setOnClickListener(this);
         btnIgual.setOnClickListener(this);
-
+        btnCE.setOnClickListener(this);
+        btnC.setOnClickListener(this);
+        btnPow.setOnClickListener(this);
+        btnRaiz.setOnClickListener(this);
 
     }
 
@@ -106,7 +115,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 numero_Click(9);
                 break;
             case R.id.btn_cero:
-                numero_Click(0);
+                if(!txtPrincipal.getText().toString().equals("0"))
+                    numero_Click(0);
                 break;
 
             case R.id.btn_mas:
@@ -144,8 +154,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
 
-        }
+            case R.id.btn_c:
+                txtPrevio.setText("");
+                txtPrincipal.setText("0");
+                inicio = true;
+                funciones = "";
+                operacion1 = true;
+                operacion2 = true;
+                igual = true;
+                valor1 = 0;
+                valor2 = 0;
+                resultado = 0;
+                break;
 
+            case R.id.btn_ce:
+                txtPrevio.setText("");
+                txtPrincipal.setText("0");
+                inicio = true;
+                funciones = "";
+                break;
+            case R.id.btn_pow:
+                valor1 = Double.parseDouble(txtPrincipal.getText().toString());
+                txtPrevio.setText("("+valor1+")^2");
+                txtPrincipal.setText(Math.pow(valor1,2)+"");
+                break;
+            case R.id.btn_raiz:
+                valor1 = Double.parseDouble(txtPrincipal.getText().toString());
+                if(valor1 >= 0)
+                {
+                    txtPrevio.setText("√"+String.valueOf(valor1)+")");
+                    txtPrincipal.setText(String.valueOf(Math.sqrt(valor1)));
+                }
+                else
+                {
+                    txtPrincipal.setText("Error");
+                }
+                break;
+        }
     }
 
 
@@ -165,8 +210,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             valor1 = Double.parseDouble(txtPrincipal.getText()+"");
             txtPrevio.setText("");
-            previo += txtPrincipal.getText() + signo;
-            txtPrevio.setText(previo);
+//            previo += txtPrincipal.getText() + signo;
+            txtPrevio.setText(txtPrevio.getText().toString()+txtPrincipal.getText().toString()+signo);
             operacion1 = false;
         }
         else if (operacion2)
@@ -176,8 +221,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            operacion2 = false;
 
             valor2 = Double.parseDouble(txtPrincipal.getText().toString());
-            previo += txtPrincipal.getText()+signo;
-            txtPrevio.setText(previo);
+//            previo += txtPrincipal.getText()+signo;
+            txtPrevio.setText(txtPrevio.getText().toString()+txtPrincipal.getText().toString()+signo);
             operacion2 = false;
         }
         else
@@ -185,8 +230,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //txtBox_previo.Text += textBox_principal.Text + signo;
             Operaciones(resultado, valor2);
 
-            previo += txtPrincipal.getText() + signo;
-            txtPrevio.setText(previo);
+//            previo += txtPrincipal.getText() + signo;
+            txtPrevio.setText(txtPrevio.getText().toString()+txtPrincipal.getText().toString()+signo);
 
         }
         tipoOperaciones = signo;
@@ -243,8 +288,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else
         {
-            principal += n+"";
-            txtPrincipal.setText(principal);
+//            principal += n+"";
+            txtPrincipal.setText(txtPrincipal.getText().toString()+n);
         }
     }
 }
