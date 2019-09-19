@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">CalculadoraEstandar</string>
+    <string name="txt_seven">7</string>
+    <string name="txt_eight">8</string>
+    <string name="txt_nine">9</string>
+    <string name="txt_four">4</string>
+    <string name="txt_five">5</string>
+    <string name="txt_six">6</string>
+    <string name="txt_one">1</string>
+    <string name="txt_two">2</string>
+    <string name="txt_three">3</string>
+    <string name="txt_menos">-</string>
+    <string name="txt_cero">0</string>
+    <string name="txt_punto">.</string>
+    <string name="txt_mas">+</string>
+    <string name="txt_igual">=</string>
+    <string name="txt_multiplicar">*</string>
+    <string name="txt_dividir">/</string>
+    <string name="punto">.</string>
 </resources>

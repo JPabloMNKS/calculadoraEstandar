@@ -16,15 +16,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
-        <EditText
-            style="@style/editTextStyle"
-            android:hint="text 1"
+        <TextView
+            style="@style/TextViewStyle"
+            android:id="@+id/txt_previo"
+            android:text=""
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <EditText
-            style="@style/editTextStyle"
-            android:hint="text 2"
+        <TextView
+            style="@style/TextViewStyle"
+            android:id="@+id/txt_principal"
+            android:text=""
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -80,27 +82,31 @@
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_siete"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="7" />
+                android:text="@string/txt_seven" />
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_ocho"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="8" />
+                android:text="@string/txt_eight" />
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_nueve"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="9" />
+                android:text="@string/txt_nine" />
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_dividir"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="/" />
+                android:text="@string/txt_dividir" />
 
         </TableRow>
 
@@ -110,27 +116,31 @@
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_cuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="4" />
+                android:text="@string/txt_four" />
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_cinco"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="5" />
+                android:text="@string/txt_five" />
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_seis"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="6" />
+                android:text="@string/txt_six" />
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_multiplicar"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="*" />
+                android:text="@string/txt_multiplicar" />
 
         </TableRow>
 
@@ -140,27 +150,32 @@
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_uno"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="1" />
+                android:text="@string/txt_one" />
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_dos"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="2" />
+                android:text="@string/txt_two" />
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_tres"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="3" />
+                android:text="@string/txt_three" />
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_menos"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="-" />
+                android:text="@string/txt_menos" />
+
         </TableRow>
 
         <TableRow
@@ -168,23 +183,26 @@
             android:layout_height="match_parent">
 
             <Button
+                style="@style/btnStyle"
+                android:id="@+id/btn_cero"
                 android:layout_span="2"
-                style="@style/btnStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="0" />
+                android:text="@string/txt_cero" />
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_punto"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="." />
+                android:text="@string/txt_punto" />
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_mas"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
-                android:text="+" />
+                android:text="@string/txt_mas" />
         </TableRow>
 
 
@@ -194,10 +212,11 @@
 
             <Button
                 style="@style/btnStyle"
+                android:id="@+id/btn_igual"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/btn_height"
                 android:layout_span="4"
-                android:text="=" />
+                android:text="@string/txt_igual" />
         </TableRow>
     </TableLayout>
 
